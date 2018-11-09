@@ -6,39 +6,50 @@ class Nav extends Component {
   constructor() {
     super();
     this.formatTitle = this.formatTitle.bind(this);
+    this.renderTextColor = this.renderTextColor.bind(this);
   }
 
   formatTitle(str) {
     str = str.replace('/', '');
-    console.log(str);
     return str;
+  }
+
+  renderTextColor() {
+    // if (this.props.location.pathname !== "/") {
+    //   document.getElementById("nav-logo").classList.add('text-dark');
+    //   var navLinks = document.getElementsByClassName("nav-link");
+    //   for (var i = 0; i < navLinks.length; i++) {
+    //     navLinks[i].classList.add('text-dark');
+    //   }
+    // } 
+    // else if (this.props.location.pathname === "/") {
+    //   console.log(document.getElementById("nav-logo"))
+    //   document.getElementById("nav-logo").classList.remove('text-dark');
+    //   for (i = 0; i < navLinks.length; i++) {
+    //     navLinks[i].classList.remove('text-dark');
+    //   }
+    // }
   }
 
   render() {
     var pageTitle;
     if (this.props.location.pathname !== "/") {
       pageTitle = <h5 className="page-title col mb-0 text-center">{this.formatTitle(this.props.location.pathname)}</h5>
-
-      document.getElementsByClassName("nav-logo")[0].classList.add('text-dark');
-      var navLinks = document.getElementsByClassName("nav-link")[0].classList.add('text-dark');
-      for (var i = 0; i < navLinks.length; i++) {
-        navLinks[i].classList.add('text-dark');
-      }
     }
-    
+    // this.renderTextColor();
     return (
       <header className="nav">
         <div className="nav-content row align-items-center">
           <div className="col">
-            <Link to="/" className="nav-logo">
+            <Link to="/" className="nav-logo text-dark" id="nav-logo">
               <h1>Christian Park</h1>
             </Link>
           </div>
           {pageTitle}
           <div className="col">
             <div className="d-flex flex-column text-right">
-              <Link to="/portfolio" className="nav-link pt-4">portfolio</Link>
-              <Link to="/about" className="nav-link">about</Link>
+              <Link to="/portfolio" className="nav-link text-dark pt-4">portfolio</Link>
+              <Link to="/about" className="nav-link text-dark">about</Link>
             </div>
           </div>
         </div>
