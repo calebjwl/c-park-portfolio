@@ -1,23 +1,48 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import '../App.css';
 
 class Nav extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     path: window.location.pathname
+  //   }
+  // }
+
   render() {
-    return (
-      <header className="nav">
-        <div class="nav-content">
-          <Link to="/" class="nav-logo">
-            <h1>Christian Park</h1>
-          </Link>
-          <div className="d-flex flex-column text-right">
-            <Link to="/portfolio" class="nav-link">portfolio</Link>
-            <Link to="/about" class="nav-link">about</Link>
+    if (this.props.location.pathname === "/") {
+      return (
+        <header className="nav">
+          <div className="nav-content">
+            <Link to="/" className="nav-logo">
+              <h1>Christian Park</h1>
+            </Link>
+            <div className="d-flex flex-column text-right">
+              <Link to="/portfolio" className="nav-link">portfolio</Link>
+              <Link to="/about" className="nav-link">about</Link>
+            </div>
           </div>
-        </div>
-      </header>
-    );
+        </header>
+      );
+    } else {
+      return (
+        <header className="nav">
+          <div className="nav-content">
+            <Link to="/" className="nav-logo text-dark">
+              <h1>Christian Park</h1>
+            </Link>
+            <h1>Page Title</h1>
+            <div className = "d-flex flex-column text-dark text-right" >
+              <Link to="/portfolio" className="nav-link">portfolio</Link>
+              <Link to="/about" className="nav-link">about</Link>
+            </div>
+          </div>
+        </header>
+      );
+    }
   }
 }
 
-export default Nav;
+const RoutedNav = withRouter(Nav);
+export default RoutedNav;

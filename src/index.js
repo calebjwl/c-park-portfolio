@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
+import App from './App';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import Portfolio from './components/Portfolio';
@@ -10,12 +11,12 @@ import * as serviceWorker from './serviceWorker';
 
 const AppRouter = () => (
   <Router>
-    <div>
-      <Nav />
+    <App>
+      <Route component={Nav} />
       <Route exact path="/" component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/about" component={About} />
-    </div>
+    </App>
   </Router>
 );
 
