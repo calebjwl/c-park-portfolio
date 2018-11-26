@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 import '../App.css';
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css'; // This only needs to be imported once in your app
+
+import images from '../images';
  
-const images = [
-  '//placekitten.com/1500/500',
-  '//placekitten.com/4000/3000',
-  '//placekitten.com/800/1200',
-  '//placekitten.com/1500/1500',
-];
- 
-export default class LightboxExample extends Component {
+export default class Portfolio extends Component {
   constructor(props) {
     super(props);
  
@@ -23,22 +18,25 @@ export default class LightboxExample extends Component {
   render() {
     const { photoIndex, isOpen } = this.state;
     var self = this;
+    var mainSrc = images[photoIndex];
+    var nextSrc = images[(photoIndex + 1) % images.length];
+    var prevSrc = images[(photoIndex + images.length - 1) % images.length];
     return (
       <div className="below-nav container">
         <div className="grid">
           {images.map(function(name, index) {
             return (
-              <div class="grid__item">
-                <img src={name} alt={name} onClick={() => self.setState({ photoIndex: index, isOpen: true })}></img>
+              <div className="grid__item" key={index}>
+                <img src={require('../img/' + name)} className="cursor-pointer" alt={name} onClick={() => self.setState({ photoIndex: index, isOpen: true })}></img>
               </div>
             );
           })}
         </div>
         {isOpen && (
           <Lightbox
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            mainSrc={require('../img/' + mainSrc)}
+            nextSrc={require('../img/' + nextSrc)}
+            prevSrc={require('../img/' + prevSrc)}
             onCloseRequest={() => this.setState({ isOpen: false })}
             onMovePrevRequest={() =>
               this.setState({

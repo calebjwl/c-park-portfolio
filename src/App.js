@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 class App extends Component {
   render() {

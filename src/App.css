@@ -12,6 +12,10 @@ img {
   max-width: 100%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* Nav */
 .nav {
   position: absolute;
