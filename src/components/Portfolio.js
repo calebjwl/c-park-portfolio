@@ -24,11 +24,16 @@ export default class LightboxExample extends Component {
     const { photoIndex, isOpen } = this.state;
     var self = this;
     return (
-      <div class="below-nav">
-        {images.map(function(name, index) {
-          return <img src={name} alt={name} onClick={() => self.setState({ photoIndex: index, isOpen: true })}></img>;
-        })}
- 
+      <div className="below-nav container">
+        <div className="grid">
+          {images.map(function(name, index) {
+            return (
+              <div class="grid__item">
+                <img src={name} alt={name} onClick={() => self.setState({ photoIndex: index, isOpen: true })}></img>
+              </div>
+            );
+          })}
+        </div>
         {isOpen && (
           <Lightbox
             mainSrc={images[photoIndex]}

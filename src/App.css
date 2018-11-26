@@ -1,3 +1,4 @@
+/* Resets */
 a {
   color: white;
 }
@@ -7,37 +8,35 @@ a:hover {
   color: gray;
 }
 
+img {
+  max-width: 100%;
+}
+
+/* Nav */
 .nav {
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-.nav-content {
+.nav__content {
   margin: 0 auto;
   width: 100%;
   max-width: 65rem;
 }
 
-.nav-logo {
+.nav__logo {
   font-family: 'Caveat', cursive;
   font-weight: 400;
 }
 
-.nav-link {
+.nav__link {
   padding: 0;
   margin-top: 1rem;
   font-weight: bold;
 }
 
-.home-bg {
-  background: url('img/l-home.jpg') no-repeat fixed center;
-  background-size: cover;
-  max-width: 100%;
-  height: 100vh;
-}
-
-.page-title {
+.page__title {
   letter-spacing: 12px;
 }
 
@@ -45,3 +44,21 @@ a:hover {
   margin-top: 7rem;
 }
 
+/* Home */
+.home-bg {
+  background: url('img/l-home.jpg') no-repeat fixed center;
+  background-size: cover;
+  max-width: 100%;
+  height: 100vh;
+}
+
+/* Portfolio */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid__item {
+  width: calc(100% / 3 - 2rem);
+  margin: 0 1rem;
+}
