@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-
-import Nav from './components/Nav'
+import $ from 'jquery';
 
 class App extends Component {
   render() {
+    // $('body').hide();
     return (
       <div>
-        {/* <Nav /> */}
         {this.props.children}
       </div>
     );
