@@ -39,14 +39,14 @@ class Nav extends Component {
     // this.renderTextColor();
     return (
       <header className="nav">
-        <div className="nav__content row align-items-center">
-          <div className="col">
+        <div className="nav__content container">
+          <div>
             <Link to="/" className="nav__logo text-dark" id="nav__logo">
               <h1>Christian Park</h1>
             </Link>
           </div>
           {pageTitle}
-          <div className="col">
+          <div>
             <div className="d-flex flex-column text-right">
               <Link to="/portfolio" className="nav__link text-dark pt-4">portfolio</Link>
               <Link to="/about" className="nav__link text-dark">about</Link>

@@ -26,7 +26,10 @@ img {
 .nav__content {
   margin: 0 auto;
   width: 100%;
-  max-width: 65rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav__logo {
@@ -45,7 +48,7 @@ img {
 }
 
 .below-nav {
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
 /* Home */
@@ -60,6 +63,8 @@ img {
 .grid {
   display: flex;
   flex-wrap: wrap;
+
+  margin: -2rem -2rem;
 }
 
 .grid__item {
