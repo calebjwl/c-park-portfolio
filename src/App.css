@@ -23,6 +23,10 @@ img {
   width: 100%;
 }
 
+.nav a:hover {
+  color: gray !important;
+}
+
 .nav__content {
   margin: 0 auto;
   width: 100%;
@@ -78,4 +82,10 @@ img {
 
 .grid__item img {
   max-height: 40vh;
+}
+
+.contact-link {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
 }
