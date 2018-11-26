@@ -26,14 +26,8 @@ export default class LightboxExample extends Component {
     return (
       <div class="below-nav">
         {images.map(function(name, index) {
-          // return <img src={name} alt={name} onClick={() => this.setState({ isOpen: true })}></img>;
-          console.log(name + index);
           return <img src={name} alt={name} onClick={() => self.setState({ photoIndex: index, isOpen: true })}></img>;
         })}
-        
-        <button type="button" onClick={() => this.setState({ isOpen: true })}>
-          Open Lightbox
-        </button>
  
         {isOpen && (
           <Lightbox
