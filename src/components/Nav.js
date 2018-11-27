@@ -9,26 +9,36 @@ class Nav extends Component {
     this.renderTextColor = this.renderTextColor.bind(this);
   }
 
+  componentDidMount() {
+    this.renderTextColor();
+  }
+
+  componentDidUpdate() {
+    this.renderTextColor();
+  }
+
   formatTitle(str) {
     str = str.replace('/', '');
     return str;
   }
 
   renderTextColor() {
-    // if (this.props.location.pathname !== "/") {
-    //   document.getElementById("nav__logo").classList.add('text-dark');
-    //   var navLinks = document.getElementsByClassName("nav__link");
-    //   for (var i = 0; i < navLinks.length; i++) {
-    //     navLinks[i].classList.add('text-dark');
-    //   }
-    // } 
-    // else if (this.props.location.pathname === "/") {
-    //   console.log(document.getElementById("nav__logo"))
-    //   document.getElementById("nav__logo").classList.remove('text-dark');
-    //   for (i = 0; i < navLinks.length; i++) {
-    //     navLinks[i].classList.remove('text-dark');
-    //   }
-    // }
+    var navLinks = document.getElementsByClassName("nav__link");
+    if (this.props.location.pathname !== "/") {
+      document.getElementById("nav__logo").classList.add('text-dark');
+      for (var i = 0; i < navLinks.length; i++) {
+        navLinks[i].classList.add('text-dark');
+      }
+    } 
+    else if (this.props.location.pathname === "/") {
+      console.log(document.getElementById("nav__logo"))
+      document.getElementById("nav__logo").classList.remove('text-dark');
+      document.getElementById("nav__logo").classList.add('text-light');
+      for (i = 0; i < navLinks.length; i++) {
+        navLinks[i].classList.remove('text-dark');
+        navLinks[i].classList.add('text-light');
+      }
+    }
   }
 
   render() {
@@ -36,20 +46,24 @@ class Nav extends Component {
     if (this.props.location.pathname !== "/") {
       pageTitle = <h5 className="page-title col mb-0 text-center">{this.formatTitle(this.props.location.pathname)}</h5>
     }
-    // this.renderTextColor();
     return (
       <header className="nav">
         <div className="nav__content container">
-          <Link to="/" className="nav__logo text-dark col" id="nav__logo">
-            <h1>Christian Park</h1>
-          </Link>
+          <div className="col">
+            <Link to="/" className="nav__logo" id="nav__logo">
+              <h1>Christian Park</h1>
+            </Link>
+          </div>
           <div className="col">
             {pageTitle}
           </div>
-          <div className="d-flex flex-column text-right col">
-            <Link to="/portfolio" className="nav__link text-dark pt-4">portfolio</Link>
-            <Link to="/about" className="nav__link text-dark">about</Link>
-          </div>        
+          <div className="col">
+            <div className="text-right pt-4">
+              <Link to="/portfolio" className="nav__link hvr-underline-from-right">portfolio</Link>
+              <br/>
+              <Link to="/about" className="nav__link hvr-underline-from-right">about</Link>
+            </div>  
+          </div>      
         </div>
       </header>
     );
