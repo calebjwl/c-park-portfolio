@@ -40,11 +40,13 @@ class Nav extends Component {
     return (
       <header className="nav">
         <div className="nav__content container">
-          <Link to="/" className="nav__logo text-dark" id="nav__logo">
+          <Link to="/" className="nav__logo text-dark col" id="nav__logo">
             <h1>Christian Park</h1>
           </Link>
-          {pageTitle}
-          <div className="d-flex flex-column text-right">
+          <div class="col">
+            {pageTitle}
+          </div>
+          <div className="d-flex flex-column text-right col">
             <Link to="/portfolio" className="nav__link text-dark pt-4">portfolio</Link>
             <Link to="/about" className="nav__link text-dark">about</Link>
           </div>        
