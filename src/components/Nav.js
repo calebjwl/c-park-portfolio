@@ -43,7 +43,7 @@ class Nav extends Component {
           <Link to="/" className="nav__logo text-dark col" id="nav__logo">
             <h1>Christian Park</h1>
           </Link>
-          <div class="col">
+          <div className="col">
             {pageTitle}
           </div>
           <div className="d-flex flex-column text-right col">
