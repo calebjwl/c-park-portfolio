@@ -59,9 +59,9 @@ class Nav extends Component {
           </div>
           <div className="col">
             <div className="text-right pt-4">
-              <Link to="/portfolio" className="nav__link hvr-underline-from-right">portfolio</Link>
+              <Link to="/portfolio" className="nav__link">portfolio</Link>
               <br/>
-              <Link to="/about" className="nav__link hvr-underline-from-right">about</Link>
+              <Link to="/about" className="nav__link">about</Link>
             </div>  
           </div>      
         </div>

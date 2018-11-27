@@ -5,8 +5,8 @@ class About extends Component {
   render() {
     return (
       <div className="below-nav container">
-        <div className="row">
-          <div className="col-8">
+        <div className="about">
+          <div className="about__bio">
             <p>Hi there! My name is Christian and I am a portrait, travel, and lifestyle photographer.</p>
             <p>I am of South Korean descent, born in Los Angeles, and raised in Nairobi, Kenya. I am currently studying Political Science at Vassar College, located right by the Hudson River in Poughkeepsie, New York.</p>
             <p>Everyone in my family, except for me, has always been invested in photography. For a while, I was oblivious to the fact that photos have such a profound way of communicating with others. I am forever indebted to my family for giving me my first SLR and providing constant guidance.</p>
@@ -17,7 +17,7 @@ class About extends Component {
               <a href="mailto:cpark@vassar.edu" class="contact-link">cpark@vassar.edu</a>
             </span>
           </div>
-          <div className="col">
+          <div className="about__portrait">
             <img src={require("../img/about-portrait.jpg")} alt="about-portrait"/>
           </div>
         </div>

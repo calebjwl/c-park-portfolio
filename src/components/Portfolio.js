@@ -27,8 +27,8 @@ export default class Portfolio extends Component {
           {images.map(function(name, index) {
             return (
               <div className="grid__item" key={index}>
-                <div className="grid__image cursor-pointer">
-                  <img src={require('../img/' + name)} alt={name} onClick={() => self.setState({ photoIndex: index, isOpen: true })}></img>
+                <div className="grid__image cursor-pointer" onClick={() => self.setState({ photoIndex: index, isOpen: true })}>
+                  <img src={require('../img/' + name)} alt={name}></img>
                 </div>
               </div>
             );
