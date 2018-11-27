@@ -18,7 +18,7 @@ class About extends Component {
             </span>
           </div>
           <div className="col">
-            <img src={require("../img/about-portrait-temp.png")} alt="about-portrait"/>
+            <img src={require("../img/about-portrait.jpg")} alt="about-portrait"/>
           </div>
         </div>
       </div>

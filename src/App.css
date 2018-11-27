@@ -80,7 +80,8 @@ img {
   justify-content: center;
 }
 
-.grid__item img {
+.grid__image {
+  position: relative;
   max-height: 40vh;
 }
 
