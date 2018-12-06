@@ -14,7 +14,7 @@ class About extends Component {
             <p>If you're interested in my work or want to collaborate, please don't hesitate to reach out! :)</p>
             
             <span className="d-flex justify-content-center mt-4">
-              <a href="mailto:cpark@vassar.edu" class="contact-link">cpark@vassar.edu</a>
+              <a href="mailto:cpark@vassar.edu" className="contact-link">cpark@vassar.edu</a>
             </span>
           </div>
           <div className="about__portrait">

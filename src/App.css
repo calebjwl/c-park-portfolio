@@ -54,22 +54,6 @@ a:hover {
   margin-top: 10rem;
 }
 
-@media screen and (max-width: 992px) {
-  .nav__logo h1 {
-    font-size: 2.3rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav__logo h1 {
-    font-size: 1.7rem;
-  }
-
-  .nav__content {
-    
-  }
-}
-
 /* Home */
 .home-bg {
   background: url('img/l-home.jpg') no-repeat fixed center;
@@ -140,4 +124,20 @@ a:hover {
 .about__portrait {
   margin: 0 1rem;
   flex-basis: calc(100%/3 - 2rem);
+}
+
+@media screen and (max-width: 992px) {
+  .nav__logo h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__logo h1 {
+    font-size: 1.7rem;
+  }
+
+  .grid__item {
+    width: 100%;
+  }
 }

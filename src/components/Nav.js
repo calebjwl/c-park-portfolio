@@ -44,7 +44,7 @@ class Nav extends Component {
   render() {
     var pageTitle;
     if (this.props.location.pathname !== "/") {
-      pageTitle = <h5 className="page-title col mb-0 text-center">{this.formatTitle(this.props.location.pathname)}</h5>
+      pageTitle = <div className="col"><h5 className="page-title col mb-0 text-center">{this.formatTitle(this.props.location.pathname)}</h5></div>
     }
     return (
       <header className="nav">
@@ -54,9 +54,7 @@ class Nav extends Component {
               <h1>Christian Park</h1>
             </Link>
           </div>
-          <div className="col">
-            {pageTitle}
-          </div>
+          {pageTitle}
           <div className="col">
             <div className="d-flex flex-column align-items-end pt-4">
               <Link to="/portfolio" className="nav__link">portfolio</Link>
