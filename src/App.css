@@ -7,7 +7,7 @@ img {
   cursor: pointer;
 }
 
-a:hover {
+.nav a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -53,6 +53,7 @@ a:hover {
 
 .below-nav {
   margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
 /* Home */
@@ -106,7 +107,6 @@ a:hover {
 }
 
 .contact-link {
-  color: black;
   font-size: 20px;
   font-weight: 500;
 }

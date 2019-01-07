@@ -13,7 +13,7 @@ class About extends Component {
             <p>While I may be fairly new to the photography game, I can say that I am in a constant pursuit to capture the beauty that surrounds us everyday. Within that pursuit, photography is the diverse toolbox that allows me to build relationships, create vivid memories, and exercise my own creativity in ways I never could have imagined.</p>
             <p>If you're interested in my work or want to collaborate, please don't hesitate to reach out! :)</p>
             
-            <span className="d-flex justify-content-center mt-4">
+            <span className="d-flex justify-content-center my-4">
               <a href="mailto:cpark@vassar.edu" className="contact-link">cpark@vassar.edu</a>
             </span>
           </div>
