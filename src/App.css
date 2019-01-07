@@ -31,6 +31,7 @@ a:hover {
 .nav__logo {
   font-family: 'Caveat', cursive;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .nav__logo:hover {
@@ -137,8 +138,16 @@ a:hover {
     font-size: 1.7rem;
   }
 
+  .grid {
+    margin: 0;
+  }
+
   .grid__item {
     width: 100%;
+  }
+
+  .page-title {
+    display: none;
   }
 
   .about {
