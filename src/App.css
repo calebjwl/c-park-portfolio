@@ -140,4 +140,17 @@ a:hover {
   .grid__item {
     width: 100%;
   }
+
+  .about {
+    flex-wrap: wrap-reverse;
+  }
+
+  .about__bio {
+    flex-basis: 100%;
+    margin-top: 2rem;
+  }
+
+  .about__portrait {
+    flex-basis: 100%;
+  }
 }
